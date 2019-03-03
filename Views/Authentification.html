@@ -1,0 +1,135 @@
+<link
+  rel="stylesheet"
+  href="../node_modules/bootstrap/dist/css/bootstrap.css"
+/>
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<style>
+#msg{
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    background:rgb(255, 254, 254);  
+}
+
+</style>
+<div class="container" style="width: 100%;text-align: center;">
+  <div style="padding:100px 100px 100px 100px;">
+    <form action=" ../Traitement/auth.php" method="POST"> 
+      <legend class="card-header bg-primary text-white">Authentifiez-vous</legend>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="inputLogin"
+          placeholder="Login"
+        />
+      </div>
+      <div class="form-group">
+        
+        <input
+          type="password"
+          class="form-control"
+          name="inputMDP"
+          placeholder="Mot de passe"
+        />
+      </div>
+
+      <div class="input-group-text">
+        <input type="checkbox" /> &nbsp; Se rappeller
+      </div>
+      <button type="button" class="btn btn-danger" style="margin: 10px;">
+            <i class="material-icons">&#xe3c1;</i>
+          </button>
+      <button type="submit" class="btn btn-success" style="margin: 10px;">
+        <i class="material-icons">&#xe3c1;</i>
+      </button>
+
+      <br />
+      <button
+        type="button"
+        class="btn btn-info"
+        style="margin: 10px;"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        <i class="material-icons">&#xe7f0;</i>
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  id="exampleModal"
+  style="width: 100%;text-align: center;"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div
+        class="modal-header card-header bg-warning"
+        style="width: 100%;text-align: center;"
+      >
+        <h5 class="modal-title  text-white" style="width: 100%;">
+          Demande d'accès
+        </h5>
+        <button
+          type="button"
+          class="close text-white"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputLogin"></label>
+            <input
+              type="text"
+              class="form-control"
+              id="mail"
+              placeholder="e-mail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputLogin"></label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="msg"
+              rows="9"
+              placeholder="Message"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-dismiss="modal"
+          style="margin: 10px;"
+        >
+          <i class="material-icons">&#xe3c1;</i>
+        </button>
+        <button type="button" class="btn btn-success" style="margin: 10px;">
+          <i class="material-icons">&#xe3c1;</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
